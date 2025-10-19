@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - NAF Recruitment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        <form class="auth-form" id="registerForm">
+            <a href="index.html" class="nav-logo auth-logo">
+                <img src="logo.png" alt="NAF Logo" class="logo-img">
+                <span>NAF RECRUITMENT</span>
+            </a>
+            <h2>Create New Account</h2>
+            <p>Start your application process by creating an account.</p>
+            
+            <div id="registerError" class="form-error"></div>
+
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <div class="input-icon">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Create a password" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <div class="input-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Register Account</button>
+
+            <div class="auth-switch">
+                Already have an account? <a href="login.html">Login Now</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
