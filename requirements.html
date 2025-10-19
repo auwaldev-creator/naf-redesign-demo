@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requirements - NAF Recruitment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="NAF Logo" class="logo-img">
+                <span>NAF RECRUITMENT</span>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="requirements.html" class="nav-link active">Requirements</a>
+                <a href="login.html" class="nav-link">Login</a>
+                <a href="register.html" class="nav-link btn btn-primary">Apply Now</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Recruitment Requirements</h1>
+            <p>Please read all instructions carefully before proceeding.</p>
+        </div>
+    </section>
+
+    <section class="requirements-main container">
+        <div class="requirements-content">
+            <div class="notice-card important">
+                <div class="notice-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="notice-content">
+                    <h3>Important Notice</h3>
+                    <p><strong>Application Process is FREE OF CHARGE.</strong> No payment should be made at any point. Any applicant suspected of impersonation or submitting false documents shall be disqualified and prosecuted.</p>
+                </div>
+            </div>
+
+            <div class="requirements-section">
+                <h2>General Requirements</h2>
+                <div class="requirements-grid">
+                    <div class="req-item">
+                        <i class="fas fa-passport"></i>
+                        <h4>Nationality</h4>
+                        <p>Applicants must be Nigerian citizens by birth.</p>
+                    </div>
+                    <div class="req-item">
+                        <i class="fas fa-birthday-cake"></i>
+                        <h4>Age</h4>
+                        <p>18 - 22 years (Non-tradesmen), 18 - 25 years (Tradesmen).</p>
+                    </div>
+                    <div class="req-item">
+                        <i class="fas fa-ruler-vertical"></i>
+                        <h4>Height</h4>
+                        <p>Male: 1.66m, Female: 1.63m.</p>
+                    </div>
+                    <div class="req-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <h4>Medical Fitness</h4>
+                        <p>Must be medically, physically, and psychologically fit.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="requirements-section">
+                <h2>Educational Requirements</h2>
+                <div class="edu-grid">
+                    <div class="edu-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Non-Tradesmen/Women</h3>
+                        <p>Minimum of 5 credits including Mathematics and English in not more than 2 sittings in WAEC/NECO/GCE/NABTEB.</p>
+                    </div>
+                    <div class="edu-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tradesmen/Women</h3>
+                        <p>ND/NCE with at least lower credit, or Trade Test Certificate, plus 5 credits including Maths & English.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <aside class="requirements-sidebar">
+            <div class="acceptance-card">
+                <h3>Acknowledgement</h3>
+                <p>Before you can apply, you must acknowledge that you have read and understood all guidelines.</p>
+                
+                <ul class="guidelines-list">
+                    <li><i class="fas fa-check-circle"></i>I meet all eligibility criteria.</li>
+                    <li><i class="fas fa-check-circle"></i>All information I will provide is true.</li>
+                    <li><i class="fas fa-check-circle"></i>I understand that this application is free.</li>
+                </ul>
+
+                <div class="acceptance-form">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="acceptGuidelines">
+                        <span class="checkmark"></span>
+                        I have read and agree to the terms
+                    </label>
+
+                    <button id="proceedBtn" class="btn btn-primary btn-full" disabled>
+                        <i class="fas fa-lock"></i>
+                        Proceed to Register
+                    </button>
+                    <div id="acceptError" class="form-error">You must accept the guidelines.</div>
+                </div>
+            </div>
+        </aside>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-section">
+                <h3>NAF Recruitment</h3>
+                <p>Official recruitment portal of the Nigerian Air Force.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="requirements.html">Requirements</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 07052683575</li>
+                    <li><i class="fas fa-envelope"></i> careers@airforce.mil.ng</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Nigerian Air Force. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
