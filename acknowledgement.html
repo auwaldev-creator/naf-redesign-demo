@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acknowledgement Card - NAF Recruitment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body class="app-body">
+    
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="NAF Logo" class="logo-img">
+                <span>ACKNOWLEDGEMENT</span>
+            </a>
+            <div class="nav-menu">
+                <button class="nav-link btn btn-secondary" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="ack-container">
+        <div class="ack-header">
+            <img src="logo.png" alt="NAF Logo">
+            <h1>ACKNOWLEDGEMENT CARD</h1>
+            <div id="ackAppId" class="ack-id">Generating Application ID...</div>
+        </div>
+
+        <section class="ack-body">
+            <div>
+                <img id="ackPhoto" src="https://via.placeholder.com/200x200.png?text=Passport" alt="Applicant Passport" class="ack-photo">
+            </div>
+            <div class="ack-details">
+                <h2 id="ackName">Loading Applicant Name...</h2>
+                <ul>
+                    <li><strong>Date of Birth:</strong> <span id="ackDob">...</span></li>
+                    <li><strong>State of Origin:</strong> <span id="ackState">...</span></li>
+                    <li><strong>LGA:</strong> <span id="ackLga">...</span></li>
+                    <li><strong>Trade:</strong> <span id="ackTrade">Non-Trade</span></li>
+                    <li><strong>Email:</strong> <span id="ackEmail">...</span></li>
+                    <li><strong>Phone Number:</strong> <span id="ackPhone">...</span></li>
+                    <li><strong>Centre:</strong> <span id="ackCentre">153 Base Services Group, Yola</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="ack-instructions">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Bring this acknowledgement card to the recruitment centre.</li>
+                <li>Bring the LGA Attestation and Parent/Guardian Consent forms (duly signed).</li>
+                <li>Bring originals and photocopies of all credentials.</li>
+                <li>Bring writing materials.</li>
+                <li>Follow any additional instructions posted on the NAF Recruitment Portal.</li>
+            </ul>
+        </section>
+
+        <section class="ack-print">
+            <p>&copy; 2025 Nigerian Air Force. All rights reserved.</p>
+            <button id="printBtn" class="btn btn-primary">
+                <i class="fas fa-print"></i> Print this Card
+            </button>
+        </section>
+    </main>
+    
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+</body>
+</html>
