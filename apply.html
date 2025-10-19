@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form - NAF Recruitment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body class="app-body">
+    
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="logo.png" alt="NAF Logo" class="logo-img">
+                <span>APPLICATION PORTAL</span>
+            </a>
+            <div class="nav-menu">
+                <span class="welcome-user" id="welcomeUser">Welcome, Applicant</span>
+                <button class="nav-link btn btn-secondary" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container app-container">
+        <div class="app-header">
+            <h1>Application Form</h1>
+            <p>Complete all steps to submit your application. You can save and continue later.</p>
+        </div>
+
+        <div class="form-wizard">
+            <div class="wizard-nav">
+                <button class="wizard-step active" data-step="1">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Personal Details</span>
+                </button>
+                <button class="wizard-step" data-step="2">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Education</span>
+                </button>
+                <button class="wizard-step" data-step="3">
+                    <i class="fas fa-upload"></i>
+                    <span>Documents</span>
+                </button>
+                <button class="wizard-step" data-step="4">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Review & Submit</span>
+                </button>
+            </div>
+
+            <form id="applicationForm">
+                <div class="form-step active" id="step1">
+                    <div class="form-section">
+                        <h3>Personal Details</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="appFullName">Full Name</label>
+                                <input type="text" id="appFullName" name="fullName" placeholder="As on documents" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="appEmail">Email Address</label>
+                                <input type="email" id="appEmail" name="email" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="appPhone">Phone Number</label>
+                                <input type="tel" id="appPhone" name="phone" placeholder="08012345678" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="appDob">Date of Birth</label>
+                                <input type="date" id="appDob" name="dob" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="appState">State of Origin</label>
+                                <input type="text" id="appState" name="state" placeholder="e.g. Taraba" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="appLga">LGA</label>
+                                <input type="text" id="appLga" name="lga" placeholder="e.g. Jalingo" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-primary" data-action="next">Next Step <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step2">
+                    <div class="form-section">
+                        <h3>Educational Background</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="appQualification">Highest Qualification</label>
+                                <select id="appQualification" name="qualification" required>
+                                    <option value="">-- Select Qualification --</option>
+                                    <option value="SSCE">SSCE (WAEC/NECO/NABTEB)</option>
+                                    <option value="ND">National Diploma (ND)</option>
+                                    <option value="NCE">NCE</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="appInstitution">Institution</label>
+                                <input type="text" id="appInstitution" name="institution" placeholder="Name of School" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="appGradYear">Year of Graduation</label>
+                                <input type="number" id="appGradYear" name="gradYear" placeholder="e.g. 2020" min="1990" max="2025" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" data-action="prev"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button type="button" class="btn btn-primary" data-action="next">Next Step <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step3">
+                    <div class="form-section">
+                        <h3>Document Upload</h3>
+                        <p>Upload scanned copies of your documents (Max 2MB each).</p>
+                        <div class="form-grid-upload">
+                            <div class="form-group">
+                                <label for="fileBirth">Birth Certificate / Age Declaration</label>
+                                <input type="file" id="fileBirth" name="fileBirth" class="file-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="fileLocalGovt">Local Government Indigeneship</label>
+                                <input type="file" id="fileLocalGovt" name="fileLocalGovt" class="file-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="fileEducation">Educational Certificate (SSCE/ND)</label>
+                                <input type="file" id="fileEducation" name="fileEducation" class="file-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="filePassport">Passport Photograph (Required)</label>
+                                <input type="file" id="filePassport" name="filePassport" class="file-input" accept="image/*" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" data-action="prev"><i class="fas fa-arrow-left"></i> Previous</button>
+                        <button type="button" class="btn btn-primary" data-action="next">Review Application <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step4">
+                    <div class="form-section">
+                        <h3>Review & Submit</h3>
+                        <p>Please review all your details carefully before submission. You cannot edit after submission.</p>
+                        <div id="reviewDetails">
+                            <p>Click "Submit" when you are ready.</p>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" data-action="prev"><i class="fas fa-arrow-left"></i> Go Back</button>
+                            <button type="submit" class="btn btn-success btn-large">
+                                <i class="fas fa-paper-plane"></i> Final Submit Application
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    <div id="toast" class="toast"></div>
+    <script src="app.js"></script>
+</body>
+</html>
