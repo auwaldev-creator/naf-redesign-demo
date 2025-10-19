@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Login - NAF Recruitment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body class="auth-body">
+
+    <div class="auth-container">
+        <form class="auth-form" id="loginForm">
+            <a href="index.html" class="nav-logo auth-logo">
+                <img src="logo.png" alt="NAF Logo" class="logo-img">
+                <span>NAF RECRUITMENT</span>
+            </a>
+            <h2>Applicant Login</h2>
+            <p>Welcome back. Please login to continue your application.</p>
+            
+            <div id="loginError" class="form-error"></div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-icon">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">Login</button>
+
+            <div class="auth-switch">
+                Don't have an account? <a href="register.html">Register Now</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
